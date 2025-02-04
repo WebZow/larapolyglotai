@@ -1,10 +1,10 @@
 {
     "name": "webzow/larapolyglotai",
     "description": "A Laravel package for creating new language folders and auto-translating them using OpenAI.",
-    "version": "1.0.0",
     "keywords": [
         "webzow",
         "laravel",
+        "auto-translate",
         "larapolyglotai"
     ],
     "homepage": "https://github.com/webzow/larapolyglotai",
@@ -32,8 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WebZOW\\Larapolyglotai\\": "src/",
-            "WebZOW\\Larapolyglotai\\Database\\Factories\\": "database/factories/"
+            "WebZOW\\Larapolyglotai\\": "src/"
         }
     },
     "autoload-dev": {
@@ -67,6 +66,6 @@
             }
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
