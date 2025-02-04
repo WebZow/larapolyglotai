@@ -9,7 +9,7 @@ Translate your application using OpenAI via artisan command easily.
 You can install the package via composer:
 
 ```bash
-composer require webzow/larapolyglotai
+composer require webzow/larapolyglotai @dev
 ```
 
 Require publish the config file with:
