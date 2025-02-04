@@ -4,6 +4,8 @@ A Laravel package for creating new language folders and auto-translating them us
 
 Translate your application using OpenAI via artisan command easily.
 
+![img.png](img.png)
+
 ## Installation
 
 You can install the package via composer:
