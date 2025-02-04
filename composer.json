@@ -1,7 +1,7 @@
 {
     "name": "webzow/larapolyglotai",
     "description": "A Laravel package for creating new language folders and auto-translating them using OpenAI.",
-    "version": "1.0.0.0",
+    "version": "1.0.0",
     "keywords": [
         "webzow",
         "laravel",
@@ -67,6 +67,6 @@
             }
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
