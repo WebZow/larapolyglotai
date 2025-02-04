@@ -1,19 +1,8 @@
 # LaraPolyglotAI
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/lucas-silva/larapolyglotai.svg?style=flat-square)](https://packagist.org/packages/lucas-silva/larapolyglotai)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/lucas-silva/larapolyglotai/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/lucas-silva/larapolyglotai/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/lucas-silva/larapolyglotai/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/lucas-silva/larapolyglotai/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/lucas-silva/larapolyglotai.svg?style=flat-square)](https://packagist.org/packages/lucas-silva/larapolyglotai)
-
 A Laravel package for creating new language folders and auto-translating them using OpenAI.
 
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/larapolyglotai.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/larapolyglotai)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+Translate your application using OpenAI via artisan command easily.
 
 ## Installation
 
@@ -23,14 +12,7 @@ You can install the package via composer:
 composer require webzow/larapolyglotai
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="larapolyglotai-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
+Require publish the config file with:
 
 ```bash
 php artisan vendor:publish --tag="larapolyglotai-config"
@@ -38,45 +20,36 @@ php artisan vendor:publish --tag="larapolyglotai-config"
 
 This is the contents of the published config file:
 
+### Configure with your OpenAI API key and the origin path.
+
 ```php
 return [
+
+    /**
+     * The lang where the translations will be copied.
+     */
+    'origin_path' => 'pt_BR',
+
+    /**
+     * The OpenAI API key.
+     */
+    'openaikey' => env('OPENAI_API_KEY'),
 ];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="larapolyglotai-views"
 ```
 
 ## Usage
 
-```php
-$larapolyglotai = new WebZOW\Larapolyglotai();
-echo $larapolyglotai->echoPhrase('Hello, WebZOW!');
-```
-
-## Testing
-
 ```bash
-composer test
+php artisan app:new-lang
 ```
 
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
 ## Credits
 
-- [WebZOW](https://github.com/webzow)
+- [Lucas Silva](https://webzow.com/)
 
 ## License
 
