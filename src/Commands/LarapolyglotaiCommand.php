@@ -18,7 +18,7 @@ class LarapolyglotaiCommand extends Command
     protected $description = 'Creates a new language folder by copying files from pt_BR and auto-translating them.';
 
     private $httpClient;
-    private ?string $openaiKey;
+    private string $openaiKey;
 
     public function __construct(Client $client)
     {
@@ -36,7 +36,9 @@ class LarapolyglotaiCommand extends Command
 //            return 1;
 //        }
 
-        if ($this->openaiKey = config('larapolyglotai.openaikey') === null) {
+        $this->openaiKey = config('larapolyglotai.openaikey') ?? null;
+
+        if (! $this->openaiKey) {
             $this->warn('Configure your OpenAI API key in the config file.');
 
             $this->openaiKey = text(
