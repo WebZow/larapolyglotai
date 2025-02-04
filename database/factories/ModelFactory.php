@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Database\Factories;
+namespace WebZOW\Larapolyglotai\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
